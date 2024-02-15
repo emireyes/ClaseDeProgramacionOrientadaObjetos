@@ -1,24 +1,28 @@
 package Objetos;
 
+class Cuadrado {
+    int id;
+    double lado;
+    public String diagonal;
 
-public class Cuadrado {
+    public Cuadrado(int id) {
+        this.id = id;
+        this.lado = (double) id / 100;
+    }
 
-	    int id;
-	    int lado;
-	    double diagonal;
+    public double getPerimetro() {
+        return 4 * this.lado;
+    }
 
-	    public Cuadrado(int id) {
-	        this.id = id;
-	        this.lado = id / 100;
-	        this.diagonal = Math.sqrt(2) * this.lado;
-	    }
+    public double getArea() {
+        return Math.pow(this.lado, 2);
+    }
 
-	    public double calculatePerimeter() {
-	        return 4 * this.lado;
-	    }
+    public String calculatePerimeter() {
+        throw new UnsupportedOperationException("Unimplemented method 'calculatePerimeter'");
+    }
 
-	    public double calculateArea() {
-	        return Math.pow(this.lado, 2);
-	    }
-	}
-
+    public String calculateArea() {
+        throw new UnsupportedOperationException("Unimplemented method 'calculateArea'");
+    }
+}
